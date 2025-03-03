@@ -1,16 +1,124 @@
 
-header{
-
-}
-
-html, body {
-    height: 100%;
+* {
     margin: 0;
-    display: flex;
-    flex-direction: column;
+    padding: 0;
+    box-sizing: border-box;
 }
+
+
+header {
+    background: #E1D4C7;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    padding: 10px 7%;
+    
+    z-index: 1000;
+}
+
+.logo img {
+    width: 10rem;
+    height: 100%;
+}
+
+header .navbar ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .navbar ul li {
+    position: relative;
+    float: left;
+}
+
+
+header .navbar ul li a {
+    text-decoration: none;
+    font-size: 20px;
+    padding: 18px;
+    color: #333;
+    display: block;
+}
+
+header .navbar ul li a:hover {
+    background: #333;
+    color: #fff;
+}
+
+header .navbar ul li ul {
+    position: absolute;
+    background: #fff;
+    display: none;
+}
+
+header .navbar ul li ul li {
+    width: 100%;
+    border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+
+
+header .navbar ul li:focus-within > ul,
+header .navbar ul li:hover > ul {
+    display: block;
+}
+
+#menu-bar {
+    display: none;
+}
+
+header label {
+    font-size: 20px;
+    color: #333;
+    cursor: pointer;
+    display: none;
+}
+/* Juster størrelsen på billedet */
+.search-icon {
+    width: 20px; /* Ændr værdien efter behov */
+    height: auto;
+  }
+  
+  /* Søgeikon-knap styling forbliver den samme */
+  .search-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Søgefelt styling */
+  .search-box {
+    position: relative;
+    list-style: none;
+  }
+  
+  .search-input {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 0;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    opacity: 0;
+    transition: width 0.3s ease, opacity 0.3s ease;
+    font-size: 16px;
+  }
+  
+  .search-box.active .search-input {
+    width: 150px;  /* Justér efter behov */
+    opacity: 1;
+    padding: 8px 10px;
+  }
+  
 .content {
     flex: 1;
+
+    
 }
 footer {
     background-color: #114547; /* Grøn farve */

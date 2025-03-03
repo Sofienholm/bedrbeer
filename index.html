@@ -5,47 +5,81 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>BedrBeer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/css.css">
   <link rel="stylesheet" href="css/samlet.css">
 </head>
 <body>
   <header>
   
-      <input type="checkbox" id="menu-bar">
-      <label for="menu-bar">Menu</label>
+    <input type="checkbox" id="menu-bar">
+    <label for="menu-bar">Menu</label>
 
-      <nav class="navbar">
-          <ul>
-            <li><a href="#">Bryggeriet</a>
-              <ul>
-                  <li><a href="#">Om BEDR BEER</a></li>
-                  <li><a href="#">Events</a> </li>
-              </ul>
+    <nav class="navbar">
+        <ul>
+          <li><a href="#">Bryggeriet</a>
+            <ul>
+                <li><a href="#">Om BEDR BEER</a></li>
+                <li><a href="#">Events</a> </li>
+            </ul>
+          </li>
+
+            <li><a href="#">Udvalg</a>
+                <ul>
+                    <li><a href="udvalg.html">Øl</a></li>
+                    <li><a href="#">Andmeldelser</a> </li>
+                </ul>
+              </li>
+
+              <li href="" class="logo">
+                <img src="images/logo5.png" alt="logo">
+              </li>
+
+            <li><a href="#">Kampange</a></li>
+            
+         
+            <li class="search-box">
+              <button class="search-toggle">
+                <img src="images/søge.png" alt="Søg" class="search-icon">
+              </button>
+              <input type="text" class="search-input" placeholder="Søg...">
             </li>
-
-              <li><a href="#">Udvalg</a>
-                  <ul>
-                      <li><a href="udvalg.html">Øl</a></li>
-                      <li><a href="#">Andmeldelser</a> </li>
-                  </ul>
-                </li>
-
-                <a href="" class="logo"></a>
-
-              <li><a href="#">Kampange</a></li>
-          </ul>
-
-      </nav>
+            
+</ul>
+    </nav>
 
 
-  </header>
+</header>
+
   <main>
     ... Indhold her ...
   </main>
 
   <footer>
+    <div class="footer-container">
+        <div class="footer-columns">
+            <div class="footer-column">
+                <p><a>Kontakt os</a></p>
+                <p><a>Om Zero Buzz Brew</a></p>
+                <p><a>Levering & pakkeshop</a></p>
+            </div>
+            <div class="footer-column">
+                <p><a>FAQ</a></p>
+                <p><a>Handelsbetingelser</a></p>
+                <p><a>Privatlivspolitik & cookies</a></p>
+            </div>
+        </div>
+        <div class="social-icons">
+            <a href="#"><img src="images/faceicon.png" alt="Facebook"></a>
+            <a href="#"><img src="images/instaicon.png" alt="Instagram"></a>
+            <a href="#"><img src="images/tiktokicon.png" alt="TikTok"></a>
+        </div>            
+    </div>
 
-  </footer>
+</footer>
   <script src="js/js.js"></script>
+  <script src="js/header.js"></script>
 </body>
 </html>
