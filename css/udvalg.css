@@ -23,3 +23,50 @@ body{
     background-color: #fbaa1b; /* Ændrer baggrundsfarven ved hover */
     transform: scale(1.05); /* Gør knappen lidt større, når man holder musen over den */
 }
+
+.container-box {
+    display: flex; /* Brug flexbox til at arrangere elementerne */
+    justify-content: space-between; /* Placerer kasserne ved siden af hinanden */
+    margin-top: -7px; /* Fjernet den negative margin */
+    background-color: #f9e67b;
+    z-index: 1;
+}
+
+.box {
+    flex: 1; /* Begge kasser fylder lige meget */
+    height: 630px; /* Sætter højden på kasserne */
+    display: flex;
+    align-items: center; /* Centrerer indholdet vertikalt */
+    justify-content: center; /* Centrerer indholdet horisontalt */
+}
+
+.box-left .passiondf {
+    max-width: 100%; /* Sikrer at billedet fylder hele bredden af boksen */
+    height: auto; /* Bevarer billedets proportioner */
+}
+
+.box-right {
+    padding: 20px; /* Giver lidt padding rundt om teksten */
+    display: flex; 
+    flex-direction: column; /* Arrangerer indholdet i en kolonne */
+    align-items: flex-start;
+}
+
+.box-right h2 {
+    font-size: 80px; /* Størrelse på overskriften */
+    color: #403836; /* Farve på overskriften */
+    margin-bottom: 0; /* Giver lidt afstand under overskriften */
+    text-align: left;
+
+}
+
+.box-right p {
+    font-size: 30px; /* Størrelse på teksten */
+    color: #555; /* Farve på teksten */
+    text-align: left;
+}
+
+.uicon {
+    max-width: 100%; /* Sikrer at billedet fylder hele bredden af boksen */
+    height: 50px; /* Bevarer billedets proportioner */
+}
