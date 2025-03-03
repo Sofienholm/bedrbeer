@@ -3,6 +3,50 @@ header{
 
 }
 
-footer{
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+.content {
+    flex: 1;
+}
+footer {
+    background-color: #114547; /* Grøn farve */
+    color: #dfd3c6;
+    padding: 24px;
+    width: 100%;
+    bottom: 0;
+}
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between; /* Fordeler elementerne bedre */
+    align-items: center;
+}
+.footer-columns {
+    display: flex;
+    gap: 250px; /* Reduceret afstand mellem tekststykkerne */
+    flex-grow: 1; /* Sørger for fleksibilitet i layoutet */
+    margin-left: 10px;
+}
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Mindre afstand mellem teksterne */
+}
+.footer-column p {
+    font-weight: 600;
+    margin: 0; /* Fjern ekstra margin */
+}
+.social-icons img {
+    width: 32px;  /* Justér størrelsen */
+    height: 32px;
+    transition: opacity 0.3s ease;
+}
 
+.social-icons img:hover {
+    opacity: 0.7;  /* Gør billedet gennemsigtigt ved hover */
 }
