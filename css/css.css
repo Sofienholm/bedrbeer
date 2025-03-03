@@ -6,7 +6,7 @@
 /* Define variables in the :root */
  :root {
    --contrast: lime;
-   --backgr: #000;
+   --backgr: #E1D4C7;
  }
 
 /* Use your variables on elements */
@@ -17,4 +17,13 @@
 
  body{
   font-family: 'Poppins', sans-serif; /* Standard font */
+  background-color: var(--backgr);
+ }
+ .introbillede{
+ justify-self: center;
+ z-index: 0;
+ }
+ .introbillede img{
+  width: 30rem;
+  height: auto;
  }
