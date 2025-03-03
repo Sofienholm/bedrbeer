@@ -40,12 +40,14 @@ footer {
 .footer-column p {
     font-weight: 600;
     margin: 0; /* Fjern ekstra margin */
+    cursor: pointer;
 }
 .social-icons img {
     width: 50px;  /* Justér størrelsen */
     height: 50px;
     transition: opacity 0.3s ease;
     margin-right: 20px;
+    cursor: pointer;
 }
 
 .social-icons img:hover {
