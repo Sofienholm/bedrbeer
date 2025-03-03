@@ -1,3 +1,25 @@
 body{
     font-family: 'Poppins', sans-serif; /* Standard font */
    }
+
+   .nyhed {
+    width: 100%;       /* Ændrer bredden af billedet */
+    height: auto;       /* Bevarer billedets proportioner */
+    z-index: 0;
+}
+.cta-button {
+    position: absolute; /* Gør det muligt at placere knappen præcist */
+    top: 87%;           /* Placerer knappen 50% fra toppen af containeren (eller skærmen) */
+    left: 12%;          /* Placerer knappen 50% fra venstre side */
+    background-color: #403836; /* Baggrund */
+    color: #E1D4C7; /* Tekst farve */
+    padding: 15px 30px; /* Indvendig afstand */
+    text-decoration: none; /* Fjerner understregning på linket */
+    border-radius: 5px; /* Runde hjørner */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #fbaa1b; /* Ændrer baggrundsfarven ved hover */
+    transform: scale(1.05); /* Gør knappen lidt større, når man holder musen over den */
+}
