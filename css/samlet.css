@@ -30,7 +30,7 @@ footer {
     display: flex;
     gap: 250px; /* Reduceret afstand mellem tekststykkerne */
     flex-grow: 1; /* Sørger for fleksibilitet i layoutet */
-    margin-left: 10px;
+    margin-left: -20px;
 }
 .footer-column {
     display: flex;
@@ -42,9 +42,10 @@ footer {
     margin: 0; /* Fjern ekstra margin */
 }
 .social-icons img {
-    width: 32px;  /* Justér størrelsen */
-    height: 32px;
+    width: 50px;  /* Justér størrelsen */
+    height: 50px;
     transition: opacity 0.3s ease;
+    margin-right: 20px;
 }
 
 .social-icons img:hover {
