@@ -102,11 +102,11 @@ header label {
     transform: translateY(-50%);
     width: 0;
     padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
+    border-radius: 5px;
     opacity: 0;
     transition: width 0.3s ease, opacity 0.3s ease;
     font-size: 16px;
+    background-color: #E1D4C7;
   }
   
   .search-box.active .search-input {
@@ -114,11 +114,15 @@ header label {
     opacity: 1;
     padding: 8px 10px;
   }
+  .search-input:focus {
+    outline: none; /* fjerner standard-fokus */
+    border: 1px solid rgb(86, 71, 56);
+  }
   
 .content {
     flex: 1;
 
-    
+
 }
 footer {
     background-color: #114547; /* Grøn farve */
