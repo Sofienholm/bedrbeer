@@ -9,7 +9,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/udvalg.css">
     <link rel="stylesheet" href="css/samlet.css">
- 
+    <link rel="icon" type="image/png" href="images/logo5.png">
+
 </head>
 <body>
     <header>
@@ -66,14 +67,42 @@
             </div>
             <div class="box box-right">
                 <h2>BEDR BEER</h2>
-                <p>Lorem ipsum dolor sit amet, 
+                <p>Lorem ipsum dolor sit amet,<br> 
                     consectetuer adipiscing elit, 
-                    <br>sed diam nonummy nibh euismod 
+                    <br>sed diam nonummy nibh<br> euismod 
                     tincidunt ut laoreet dolore </p>
                     <img src="images/uicon.png" alt="Billede" class="uicon">
             </div>
+                    
+            <div class="dropdown-container">
+              <span class="dropdown-text">SE INDHOLD</span>
+              <button class="dropdown-btn" onclick="toggleDropdown()">
+                  <span class="arrow">▼</span>
+              </button>
+          </div>
         </div>
-        
+
+  
+      <!-- 📌 Dropdown-boks, der fylder hele siden -->
+      <div class="dropdown-box" id="beerBox">
+          <div class="content-wrapper">
+              <!-- Infografik -->
+              <div class="beer-infographic">
+                  <img src="beer-infographic.png" alt="Øl Infografik">
+              </div>
+  
+              <!-- Information om øllen -->
+              <div class="beer-details">
+                  <h2>Vores Øl</h2>
+                  <p>Læs mere om vores unikke øl, brygget med kærlighed.</p>
+                  <ul>
+                      <li>🍺 Type: IPA</li>
+                      <li>🔥 Alkoholprocent: 5.5%</li>
+                      <li>🌿 Ingredienser: Humle, malt og vand</li>
+                  </ul>
+              </div>
+          </div>
+      </div>
 
     </main>
 
