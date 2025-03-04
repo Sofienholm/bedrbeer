@@ -115,18 +115,53 @@ body{
 .info-box {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     justify-content: space-between;
     width: 45%; /* Giver plads til tekstboksen */
     position: relative;
 }
 
+/* 🎨 Skråt ned billeder */
 .infographic-image {
-    width: 100%;
     height: auto;
-    margin-bottom: 20px;
-    transform: rotate(-10deg); /* Skråner billederne */
     transition: transform 0.3s ease;
+    transform-origin: center center;
+    gap: 20px;
 }
+
+/* 🎨 Justering af billeder */
+.infographic-image:nth-child(1) {
+    transform: rotate(0deg) translateY(-50px);
+    position: absolute;
+    bottom: -10px;
+    left: 10px;
+    width: 35%;
+}
+
+.infographic-image:nth-child(2) {
+    transform: rotate(0deg) translateY(50px);
+    position: absolute;
+    bottom: 30px;
+    left: 160px;
+    width: 45%;
+}
+
+.infographic-image:nth-child(3) {
+    transform: rotate(0deg) translateY(-100px);
+    position: absolute;
+    left: 190px; /* Justeret afstand */
+    bottom: -325px; /* Justeret afstand */
+    width: 35%;
+}
+
+.infographic-image:nth-child(4) {
+    transform: rotate(0deg) translateY(100px);
+    position: absolute;
+    left: 370px; /* Justeret afstand */
+    bottom: -180px; /* Justeret afstand */
+    width: 35%;
+}
+
 
 /* 🎨 Højre boks med tekst */
 .text-box {
@@ -135,6 +170,14 @@ body{
     text-align: left;
     font-size: 18px;
     color: #555;
+}
+.text-box p {
+    line-height: 1.6;
+}
+
+/* 🎨 Hover-effekt på billeder */
+.infographic-image:hover {
+    transform: rotate(0deg); /* Ændrer billedets skråning ved hover */
 }
 
 /* 🎨 Dropdown-knap som en cirkel med sort pil */
