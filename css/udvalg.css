@@ -151,6 +151,80 @@ body{
     height: auto;
 }
 
+/* 🎨 Dropdown-containeren */
+.dropdown-container {
+    display: inline-flex; /* Sørger for, at teksten og knappen placeres horisontalt */
+    align-items: center; /* Centrerer indholdet vertikalt */
+    margin-top: 530px;
+    position: relative;
+    right: 30%;
+}
+
+.dropdown-text {
+    font-weight: bold;
+    margin-right: 15px;
+}
+
+/* 🎨 Dropdown-knap som en cirkel med sort pil */
+.dropdown-btn {
+    background-color: transparent;  /* Gør baggrunden gennemsigtig */
+    color: black;                   /* Sætter tekstfarven til sort */
+    padding: 10px 20px;             /* Tilføjer ekstra plads til teksten */
+    border: 2px solid black;        /* Tilføjer en sort kant rundt om cirklen */
+    border-radius: 50%;             /* Gør knappen til en cirkel */
+    cursor: pointer;
+    font-size: 24px;                /* Størrelse på pilen */
+    display: flex;           /* Sørger for tekst og pil er ved siden af hinanden */
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    height: 50px;
+    width: 50px;
+}
+
+/* 🎨 Pil roterer, når dropdown åbnes */
+.arrow {
+    transition: transform 0.3s ease;
+}
+
+/* 🎨 Dropdown-boks starter skjult */
+.dropdown-box {
+    position: relative;
+    top: 20px; /* Sørger for at dropdownen åbner sig lige under knappen */
+    left: 0;
+    width: 100%;
+    background-color: white;
+    overflow: hidden;
+    max-height: 0;
+    padding: 0 20px;
+    transition: max-height 0.5s ease-out, padding 0.3s ease, opacity 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+}
+
+/* 🎨 Når dropdown åbnes */
+.dropdown-box.show {
+    max-height: 1000px;
+    opacity: 1;
+    padding: 20px;
+}
+
+/* 🎨 Indhold i dropdown-boksen */
+.content-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+}
+
+/* 🎨 Infografik */
+.beer-infographic img {
+    width: 250px;
+    height: auto;
+}
+
 /* 🎨 Justering af pilen, når dropdown åbnes */
 .dropdown-btn.open .arrow {
     transform: rotate(180deg); /* Roter pilen */
