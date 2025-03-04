@@ -57,47 +57,58 @@ gap: 8rem;
   box-sizing: border-box;
 }
 
-
-/* Snap-scroll container */
-.snap-container {
-  height: 100vh; /* Fylder hele skærmen */
-  overflow-y: scroll; /* Gør det muligt at scrolle */
-  scroll-snap-type: y mandatory; /* Snap-effekt */
+.parallax-container {
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  height: auto;
+  scroll-behavior: smooth;
 }
 
-/* Hver sektion fylder hele skærmen */
-.snap-section {
-  height: 100vh; /* Fylder hele skærmen */
+/* Hver sektion skal have en parallax-effekt */
+.parallax-section {
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
   font-size: 3rem;
   font-weight: bold;
   color: white;
-  scroll-snap-align:start; /* Sørger for, at sektionen snapper til */
+  position: relative;
+  overflow: hidden;
 }
 
-/* Baggrundsfarver for test */
-.s1 { background-image: url(../images/baggrund1.png); } /* Rød-orange */
-.s2 { background-image: url(../images/baggrund2.png);} /* Grøn */
-.s3 { background-image: url(../images/baggrund3.png);} /* Blå */
-/* Baggrundsdiv (ny styling) */
+/* Baggrundsbillede med parallax-effekt */
 .bg {
   position: absolute;
-  width: 100%;
- 
+  width: 120%;
+  height: 120%;
   background-size: cover;
   background-position: center;
-  transform: translateY(100%); /* Starter udenfor skærmen */
-  transition: transform 1s ease-in-out; /* Smooth animation */
+  transform: translateY(20%); /* Start lavere for parallax-effekt */
+  transition: transform 0.3s ease-out;
+  
 }
 
+/* Model-viewer (3D dåser) */
 model-viewer {
   width: 250px;
   height: 500px;
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%, -100px) rotate(0deg);
-  opacity: 1;
-  transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
+
+
+
+
+
+/* Baggrundsfarver for test */
+.s1 { 
+  background-image: url(../images/baggrund1.png)
+
+} /* Rød-orange */
+.s2 { background-image: url(../images/baggrund2.png);} /* Grøn */
+.s3 { background-image: url(../images/baggrund3.png);} /* Blå */
+/* Baggrundsdiv (ny styling) */
