@@ -1,0 +1,63 @@
+/* Generel styling for hele siden */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f6f1eb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.newsletter-container {
+    background-color: #403836; /* Baggrundsfarve */
+    border-radius: 700px 700px 0 0 ; /* Halv cirkel nederst */
+    padding: 50px 20px; /* Reduktion af padding for bedre visning */
+    width: 100%; /* Fyld hele bredden af forælderen */
+    max-width: 800px; /* Maksimal bredde */
+    text-align: center; /* Centrerer indholdet */
+    margin: 30px auto; /* Centrerer containeren på siden */
+    box-sizing: border-box; 
+    
+
+.newsletter-form h2 {
+    font-size: 2rem;
+    color: #E1D4C7;
+}
+
+.newsletter-form p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #E1D4C7; 
+} 
+
+.newsletter-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: #E1D4C7;
+     
+}
+
+.newsletter-form input {
+    padding: 12px;
+    font-size: 1rem;
+    border-radius: 10px;
+    width: 50%;
+    background-color: #E1D4C7;
+    text-align: center;
+}
+
+.newsletter-form button {
+    background-color: #E1D4C7;
+    padding: 12px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 50%;
+    text-align: center;
+}
+.newsletter-form button:hover {
+    background-color: #E1D4C7; 
+}

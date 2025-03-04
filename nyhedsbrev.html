@@ -10,6 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/css.css">
   <link rel="stylesheet" href="css/samlet.css">
+  <link rel="stylesheet" href="css/nyhedsbrev.css">
 </head>
 <body>
   <header>
@@ -69,39 +70,14 @@
 
 </article>
 
-<div class="snap-container">
-  <section class="snap-section s1">
-      <div class="bg"></div>
-      IPA Sunset Ale
-  </section>
 
-  <section class="snap-section s2">
-      <div class="bg"></div>
-      Tropical Haze
-  </section>
-
-  <section class="snap-section s3">
-      <div class="bg"></div>
-      Berry Blast
-  </section>
-</div>
 <aside class="ol1">
 
 
 </aside>
 
 <aside class="ol2">
-<div>
-  <h2>
 
-  </h2>
-  <h3>
-
-  </h3>
-</div>
-<div>
-  
-</div>
 
 </aside>
 
@@ -110,7 +86,22 @@
 
 </aside>
 
-  </main>
+   <!-- Nyhedsbrev Formular -->
+   <section class="newsletter-container">
+    <div class="newsletter-form">
+      <h2>Nyhedsbrev</h2>
+      <p>Modtag eksklusive rabatter, nyheder & smagstests direkte i din indbakke</p>
+      <form action="submit_form.php" method="POST">
+        <input type="text" name="name" placeholder="Skriv dit navn" required>
+        <input type="email" name="email" placeholder="Indtast din email" required>
+        <button type="submit">Tilmeld dig</button>
+      </form>
+    </div>
+  </section>
+</main>
+
+
+
 
   <footer>
     <div class="footer-container">
