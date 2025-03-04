@@ -18,6 +18,8 @@
  body{
   font-family: 'Poppins', sans-serif; /* Standard font */
   background-color: var(--backgr);
+  scroll-behavior: smooth;
+
  }
  .introbillede{
  justify-self: center;
@@ -52,4 +54,39 @@ gap: 8rem;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+
+/* Snap-scroll container */
+.snap-container {
+  height: 100vh; /* Fylder hele skærmen */
+  overflow-y: scroll; /* Gør det muligt at scrolle */
+  scroll-snap-type: y mandatory; /* Snap-effekt */
+}
+
+/* Hver sektion fylder hele skærmen */
+.snap-section {
+  height: 100vh; /* Fylder hele skærmen */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  font-weight: bold;
+  color: white;
+  scroll-snap-align:start; /* Sørger for, at sektionen snapper til */
+}
+
+/* Baggrundsfarver for test */
+.s1 { background-image: url(../images/baggrund1.png); } /* Rød-orange */
+.s2 { background-image: url(../images/baggrund2.png);} /* Grøn */
+.s3 { background-image: url(../images/baggrund3.png);} /* Blå */
+/* Baggrundsdiv (ny styling) */
+.bg {
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  background-size: cover;
+  background-position: center;
+  transform: translateY(100%); /* Starter udenfor skærmen */
+  transition: transform 1s ease-in-out; /* Smooth animation */
 }
