@@ -162,22 +162,25 @@ body{
     width: 35%;
 }
 
+/* 🎨 Hover-effekt, når musen er over billedet */
+.infographic-image:hover {
+    transform: scale(1.01); /* Skalerer lidt mindre end før */
+}
+
 
 /* 🎨 Højre boks med tekst */
 .text-box {
-    width: 50%; /* Giver den tilstrækkelig plads */
+    max-width: 800px;
+    line-height: 1.5;
     padding: 20px;
-    text-align: left;
-    font-size: 18px;
-    color: #555;
 }
 .text-box p {
-    line-height: 1.6;
-}
-
-/* 🎨 Hover-effekt på billeder */
-.infographic-image:hover {
-    transform: rotate(0deg); /* Ændrer billedets skråning ved hover */
+    font-size: 24px; /* Juster skriftstørrelsen */
+    font-weight: bold; /* Fed skrift */
+    font-style: italic; /* Skrå skrift */
+    color: #6a1b1d; /* Mørk rød farve */
+    text-align: center; /* Centrer tekst */
+    margin-bottom: 20px; /* Afstand mellem afsnit */
 }
 
 /* 🎨 Dropdown-knap som en cirkel med sort pil */
