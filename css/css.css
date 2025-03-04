@@ -19,6 +19,7 @@
   font-family: 'Poppins', sans-serif; /* Standard font */
   background-color: var(--backgr);
   scroll-behavior: smooth;
+  overflow-x: hidden; 
 
  }
  .introbillede{
@@ -83,10 +84,20 @@ gap: 8rem;
 /* Baggrundsdiv (ny styling) */
 .bg {
   position: absolute;
-  width: 120%;
-  height: 120%;
+  width: 100%;
+ 
   background-size: cover;
   background-position: center;
   transform: translateY(100%); /* Starter udenfor skærmen */
   transition: transform 1s ease-in-out; /* Smooth animation */
+}
+
+model-viewer {
+  width: 250px;
+  height: 500px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -100px) rotate(0deg);
+  opacity: 1;
+  transition: transform 1s ease-in-out, opacity 1s ease-in-out;
 }

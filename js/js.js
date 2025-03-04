@@ -3,8 +3,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
     let sections = document.querySelectorAll(".snap-section");
     let isScrolling = false;
-    let firstScroll = false; // Sørger for, at første scroll går til sektion 1
-    let currentSectionIndex = -1; // Starter "før" første sektion
+    let firstScroll = false;
+    let currentSectionIndex = -1;
 
     function goToSection(index) {
         if (index < 0 || index >= sections.length) return;
@@ -21,15 +21,8 @@ document.addEventListener("DOMContentLoaded", function() {
     document.addEventListener("wheel", function(event) {
         if (isScrolling) return;
 
-        // **Tjek om vi er i toppen igen, og nulstil scroll-systemet**
-        if (window.scrollY === 0) {
-            firstScroll = false;
-            currentSectionIndex = -1;
-            return;
-        }
-
         if (!firstScroll) {
-            firstScroll = true; // Første scroll går til sektion 1
+            firstScroll = true;
             goToSection(0);
             return;
         }
@@ -44,13 +37,6 @@ document.addEventListener("DOMContentLoaded", function() {
     document.addEventListener("keydown", function(event) {
         if (isScrolling) return;
 
-        // **Tjek om vi er i toppen igen, og nulstil scroll-systemet**
-        if (window.scrollY === 0) {
-            firstScroll = false;
-            currentSectionIndex = -1;
-            return;
-        }
-
         if (!firstScroll) {
             firstScroll = true;
             goToSection(0);
@@ -62,6 +48,32 @@ document.addEventListener("DOMContentLoaded", function() {
         } else if (event.key === "ArrowUp") {
             goToSection(currentSectionIndex - 1);
         }
+    });
+
+    // **Tilføj animation af 3D-dåsen**
+    let observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            let can = entry.target.querySelector("model-viewer");
+
+            if (!can) {
+                console.log("Ingen model-viewer fundet i:", entry.target);
+                return;
+            }
+
+            if (entry.isIntersecting) {
+                console.log("Model bliver synlig:", entry.target);
+                can.style.opacity = "1";
+                can.style.transform = "translateY(0px) rotate(360deg)";
+            } else {
+                console.log("Model bliver skjult:", entry.target);
+                can.style.opacity = "0";
+                can.style.transform = "translateY(-100px) rotate(0deg)";
+            }
+        });
+    }, { threshold: 0.5 }); // Mindre threshold gør, at animation starter tidligere
+
+    sections.forEach(section => {
+        observer.observe(section);
     });
 
     // **Sørg for, at brugeren starter i toppen af siden**

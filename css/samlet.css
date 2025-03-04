@@ -125,12 +125,14 @@ header label {
 
 }
 footer {
-    background-color: #114547; /* Grøn farve */
-    color: #dfd3c6;
-    padding: 24px;
-    width: 100%;
-    bottom: 0;
-}
+        width: 100%;
+        background-color: #114547;
+        color: #dfd3c6;
+        padding: 24px;
+       
+    }
+
+
 .footer-container {
     max-width: 1200px;
     margin: 0 auto;
