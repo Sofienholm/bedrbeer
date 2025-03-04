@@ -27,3 +27,29 @@
   width: 30rem;
   height: auto;
  }
+
+ .forstetreøl img{
+  width: 20rem;
+  height: auto;
+  padding: 5rem 0 5rem 0;
+ 
+ }
+ #slogan{
+  width: 30rem;
+  height: auto;
+ }
+  .forstetreøl{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    margin: 0 auto;
+gap: 8rem;
+    background-color:#f18548 ;
+  }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
