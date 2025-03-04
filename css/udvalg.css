@@ -9,11 +9,13 @@ body{
     z-index: 0;
 }
 
-
-.cta-button {
-    position: absolute; /* Gør det muligt at placere knappen præcist */
+.cta-container {
+    position: absolute; /* Sørger for, at .cta-button forbliver fast */
     top: 39%;           /* Placerer knappen 50% fra toppen af containeren (eller skærmen) */
     left: 12%;          /* Placerer knappen 50% fra venstre side */
+}
+
+.cta-button {
     background-color: #403836; /* Baggrund */
     color: #E1D4C7; /* Tekst farve */
     padding: 15px 30px; /* Indvendig afstand */
@@ -88,9 +90,97 @@ body{
     right: 30%;
 }
 
-.dropdown-text {
-    font-weight: bold;
-    margin-right: 15px;
+/* 🎨 Pil roterer, når dropdown åbnes */
+.arrow {
+    transition: transform 0.3s ease;
+}
+
+
+/* 🎨 Når dropdown åbnes */
+.dropdown-box.show {
+    max-height: 1000px;
+    opacity: 1;
+    padding: 20px;
+}
+
+/* 🎨 Wrapper til indholdet */
+.content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+/* 🎨 Venstre boks med billeder */
+.info-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 45%; /* Giver plads til tekstboksen */
+    position: relative;
+}
+
+/* 🎨 Skråt ned billeder */
+.infographic-image {
+    height: auto;
+    transition: transform 0.3s ease;
+    transform-origin: center center;
+    gap: 20px;
+}
+
+/* 🎨 Justering af billeder */
+.infographic-image:nth-child(1) {
+    transform: rotate(0deg) translateY(-50px);
+    position: absolute;
+    bottom: -10px;
+    left: 10px;
+    width: 35%;
+}
+
+.infographic-image:nth-child(2) {
+    transform: rotate(0deg) translateY(50px);
+    position: absolute;
+    bottom: 30px;
+    left: 160px;
+    width: 45%;
+}
+
+.infographic-image:nth-child(3) {
+    transform: rotate(0deg) translateY(-100px);
+    position: absolute;
+    left: 190px; /* Justeret afstand */
+    bottom: -325px; /* Justeret afstand */
+    width: 35%;
+}
+
+.infographic-image:nth-child(4) {
+    transform: rotate(0deg) translateY(100px);
+    position: absolute;
+    left: 370px; /* Justeret afstand */
+    bottom: -180px; /* Justeret afstand */
+    width: 35%;
+}
+
+/* 🎨 Hover-effekt, når musen er over billedet */
+.infographic-image:hover {
+    transform: scale(1.01); /* Skalerer lidt mindre end før */
+}
+
+
+/* 🎨 Højre boks med tekst */
+.text-box {
+    max-width: 800px;
+    line-height: 1.5;
+    padding: 20px;
+}
+.text-box p {
+    font-size: 24px; /* Juster skriftstørrelsen */
+    font-weight: bold; /* Fed skrift */
+    font-style: italic; /* Skrå skrift */
+    color: #6a1b1d; /* Mørk rød farve */
+    text-align: center; /* Centrer tekst */
+    margin-bottom: 20px; /* Afstand mellem afsnit */
 }
 
 /* 🎨 Dropdown-knap som en cirkel med sort pil */
@@ -111,120 +201,23 @@ body{
     width: 50px;
 }
 
-/* 🎨 Pil roterer, når dropdown åbnes */
-.arrow {
-    transition: transform 0.3s ease;
-}
-
-/* 🎨 Dropdown-boks starter skjult */
+/* 🎨 Dropdown-boksen */
 .dropdown-box {
-    position: relative;
-    top: 20px; /* Sørger for at dropdownen åbner sig lige under knappen */
+    position: static;
+    top: 100%;
     left: 0;
     width: 100%;
-    background-color: white;
+    background-color: #E1D4C7;
     overflow: hidden;
     max-height: 0;
     padding: 0 20px;
     transition: max-height 0.5s ease-out, padding 0.3s ease, opacity 0.3s ease;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     opacity: 0;
-}
-
-/* 🎨 Når dropdown åbnes */
-.dropdown-box.show {
-    max-height: 1000px;
-    opacity: 1;
-    padding: 20px;
-}
-
-/* 🎨 Indhold i dropdown-boksen */
-.content-wrapper {
+    z-index: 1000;
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    padding: 20px;
-}
-
-/* 🎨 Infografik */
-.beer-infographic img {
-    width: 250px;
-    height: auto;
-}
-
-/* 🎨 Dropdown-containeren */
-.dropdown-container {
-    display: inline-flex; /* Sørger for, at teksten og knappen placeres horisontalt */
-    align-items: center; /* Centrerer indholdet vertikalt */
-    margin-top: 530px;
-    position: relative;
-    right: 30%;
-}
-
-.dropdown-text {
-    font-weight: bold;
-    margin-right: 15px;
-}
-
-/* 🎨 Dropdown-knap som en cirkel med sort pil */
-.dropdown-btn {
-    background-color: transparent;  /* Gør baggrunden gennemsigtig */
-    color: black;                   /* Sætter tekstfarven til sort */
-    padding: 10px 20px;             /* Tilføjer ekstra plads til teksten */
-    border: 2px solid black;        /* Tilføjer en sort kant rundt om cirklen */
-    border-radius: 50%;             /* Gør knappen til en cirkel */
-    cursor: pointer;
-    font-size: 24px;                /* Størrelse på pilen */
-    display: flex;           /* Sørger for tekst og pil er ved siden af hinanden */
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    height: 50px;
-    width: 50px;
-}
-
-/* 🎨 Pil roterer, når dropdown åbnes */
-.arrow {
-    transition: transform 0.3s ease;
-}
-
-/* 🎨 Dropdown-boks starter skjult */
-.dropdown-box {
-    position: relative;
-    top: 20px; /* Sørger for at dropdownen åbner sig lige under knappen */
-    left: 0;
-    width: 100%;
-    background-color: white;
-    overflow: hidden;
-    max-height: 0;
-    padding: 0 20px;
-    transition: max-height 0.5s ease-out, padding 0.3s ease, opacity 0.3s ease;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    opacity: 0;
-}
-
-/* 🎨 Når dropdown åbnes */
-.dropdown-box.show {
-    max-height: 1000px;
-    opacity: 1;
-    padding: 20px;
-}
-
-/* 🎨 Indhold i dropdown-boksen */
-.content-wrapper {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    padding: 20px;
-}
-
-/* 🎨 Infografik */
-.beer-infographic img {
-    width: 250px;
-    height: auto;
+    justify-content: space-between; /* Placerer billeder og tekst side om side */
+    height: 630px; /* Sætter højden på kasserne */
 }
 
 /* 🎨 Justering af pilen, når dropdown åbnes */
