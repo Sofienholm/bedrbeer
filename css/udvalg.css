@@ -1,5 +1,6 @@
 body{
     font-family: 'Poppins', sans-serif; /* Standard font */
+    position: relative;
    }
 
    .nyhed {
@@ -9,7 +10,7 @@ body{
 }
 .cta-button {
     position: absolute; /* Gør det muligt at placere knappen præcist */
-    top: 87%;           /* Placerer knappen 50% fra toppen af containeren (eller skærmen) */
+    top: 39%;           /* Placerer knappen 50% fra toppen af containeren (eller skærmen) */
     left: 12%;          /* Placerer knappen 50% fra venstre side */
     background-color: #403836; /* Baggrund */
     color: #E1D4C7; /* Tekst farve */
@@ -17,6 +18,7 @@ body{
     text-decoration: none; /* Fjerner understregning på linket */
     border-radius: 5px; /* Runde hjørner */
     transition: background-color 0.3s ease, transform 0.3s ease;
+    z-index: 5;
 }
 
 .cta-button:hover {
@@ -41,8 +43,9 @@ body{
 }
 
 .box-left .passiondf {
-    max-width: 100%; /* Sikrer at billedet fylder hele bredden af boksen */
+    max-width: 150%; /* Sikrer at billedet fylder hele bredden af boksen */
     height: auto; /* Bevarer billedets proportioner */
+    margin-left: 150px;
 }
 
 .box-right {
@@ -57,16 +60,98 @@ body{
     color: #403836; /* Farve på overskriften */
     margin-bottom: 0; /* Giver lidt afstand under overskriften */
     text-align: left;
-
+    margin-top: -200px;
 }
 
 .box-right p {
-    font-size: 30px; /* Størrelse på teksten */
+    font-size: 27px; /* Størrelse på teksten */
     color: #555; /* Farve på teksten */
     text-align: left;
+    align-items: flex-start; /* Sørger for, at alt flugter til venstre */
+    padding-top: 5px; /* Eventuelt lidt padding for at finjustere placering */
 }
 
 .uicon {
-    max-width: 100%; /* Sikrer at billedet fylder hele bredden af boksen */
+    max-width: 125%; /* Sikrer at billedet fylder hele bredden af boksen */
     height: 50px; /* Bevarer billedets proportioner */
+    margin-top: 10px;
+}
+
+/* 🎨 Dropdown-containeren */
+.dropdown-container {
+    display: inline-flex; /* Sørger for, at teksten og knappen placeres horisontalt */
+    align-items: center; /* Centrerer indholdet vertikalt */
+    margin-top: 530px;
+    position: relative;
+    right: 30%;
+}
+
+.dropdown-text {
+    font-weight: bold;
+    margin-right: 15px;
+}
+
+/* 🎨 Dropdown-knap som en cirkel med sort pil */
+.dropdown-btn {
+    background-color: transparent;  /* Gør baggrunden gennemsigtig */
+    color: black;                   /* Sætter tekstfarven til sort */
+    padding: 10px 20px;             /* Tilføjer ekstra plads til teksten */
+    border: 2px solid black;        /* Tilføjer en sort kant rundt om cirklen */
+    border-radius: 50%;             /* Gør knappen til en cirkel */
+    cursor: pointer;
+    font-size: 24px;                /* Størrelse på pilen */
+    display: flex;           /* Sørger for tekst og pil er ved siden af hinanden */
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    height: 50px;
+    width: 50px;
+}
+
+/* 🎨 Pil roterer, når dropdown åbnes */
+.arrow {
+    transition: transform 0.3s ease;
+}
+
+/* 🎨 Dropdown-boks starter skjult */
+.dropdown-box {
+    position: relative;
+    top: 20px; /* Sørger for at dropdownen åbner sig lige under knappen */
+    left: 0;
+    width: 100%;
+    background-color: white;
+    overflow: hidden;
+    max-height: 0;
+    padding: 0 20px;
+    transition: max-height 0.5s ease-out, padding 0.3s ease, opacity 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+}
+
+/* 🎨 Når dropdown åbnes */
+.dropdown-box.show {
+    max-height: 1000px;
+    opacity: 1;
+    padding: 20px;
+}
+
+/* 🎨 Indhold i dropdown-boksen */
+.content-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+}
+
+/* 🎨 Infografik */
+.beer-infographic img {
+    width: 250px;
+    height: auto;
+}
+
+/* 🎨 Justering af pilen, når dropdown åbnes */
+.dropdown-btn.open .arrow {
+    transform: rotate(180deg); /* Roter pilen */
 }
