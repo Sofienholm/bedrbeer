@@ -10,6 +10,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/css.css">
   <link rel="stylesheet" href="css/samlet.css">
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
 </head>
 <body>
   <header>
@@ -69,21 +71,65 @@
 
 </article>
 
+<article class="kampagne">
+  <div>
+<img src="images/stock.svg" alt="">
+<h3>
 
-<aside class="ol1">
+</h3> 
+<p>
+  
+</p>
+ </div>
+  <div>
+<img id="slogan" src="images/slogan.png" alt="">
+  </div>
 
+</article>
+  <div class="parallax-container">
+    <section class="parallax-section s1">
+        <div class="bg"></div>
+        <h1>GUILTY PASSION</h1>
+        <model-viewer 
+            class="beer-can" 
+            src="models/passssiiiooonnn.glb" 
+            alt="3D Øldåse"
+          
+            auto-rotate
+            shadow-intensity="1"
+            exposure="1.2"
+            ar
+            ar-modes="webxr scene-viewer quick-look"
+            disable-zoom>
+        </model-viewer>
+    </section>
+  
+    <section class="parallax-section s2">
+        <div class="bg"></div>
+        <h1>LUSTY RAZZ</h1>
+        <model-viewer 
+            class="beer-can" 
+            src="models/hindbærrrrrrr.glb" 
+            alt="3D Øldåse"
+            auto-rotate
+            camera-controls>
+        </model-viewer>
+    </section>
+  
+    <section class="parallax-section s3">
+        <div class="bg"></div>
+        <h1>ZESTY CITRUS</h1>
+        <model-viewer 
+            class="beer-can" 
+            src="models/citrooooonnn.glb" 
+            alt="3D Øldåse"
+            auto-rotate
+            camera-controls>
+        </model-viewer>
+    </section>
+  </div>
+  
 
-</aside>
-
-<aside class="ol2">
-
-
-</aside>
-
-<aside class="ol3">
-
-
-</aside>
 
   </main>
 
@@ -111,5 +157,6 @@
 </footer>
   <script src="js/js.js"></script>
   <script src="js/header.js"></script>
+ 
 </body>
 </html>

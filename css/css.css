@@ -4,52 +4,111 @@
  **/
 
 /* Define variables in the :root */
- :root {
-   --contrast: lime;
-   --backgr: #E1D4C7;
- }
+:root {
+  --contrast: lime;
+  --backgr: #E1D4C7;
+}
 
 /* Use your variables on elements */
- main {
-   color: var(--contrast);
-   background-color: var(--backgr);
- }
-
- body{
-  font-family: 'Poppins', sans-serif; /* Standard font */
+main {
+  color: var(--contrast);
   background-color: var(--backgr);
- }
- .introbillede{
- justify-self: center;
- z-index: 0;
- }
- .introbillede img{
-  width: 30rem;
-  height: auto;
- }
+}
 
- .forstetreøl img{
-  width: 20rem;
-  height: auto;
-  padding: 5rem 0 5rem 0;
- 
- }
- #slogan{
-  width: 30rem;
-  height: auto;
- }
-  .forstetreøl{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1;
-    margin: 0 auto;
+body{
+ font-family: 'Poppins', sans-serif; /* Standard font */
+ background-color: var(--backgr);
+ scroll-behavior: smooth;
+ overflow-x: hidden; 
+
+}
+.introbillede{
+justify-self: center;
+z-index: 0;
+}
+.introbillede img{
+ width: 30rem;
+ height: auto;
+}
+
+.forstetreøl img{
+ width: 20rem;
+ height: auto;
+ padding: 5rem 0 5rem 0;
+
+}
+#slogan{
+ width: 30rem;
+ height: auto;
+}
+ .forstetreøl{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   z-index: 1;
+   margin: 0 auto;
 gap: 8rem;
-    background-color:#f18548 ;
-  }
+   background-color:#f18548 ;
+ }
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
 }
+
+.parallax-container {
+ display: flex;
+ flex-direction: column;
+ overflow-y: auto;
+ height: auto;
+ scroll-behavior: smooth;
+}
+
+/* Hver sektion skal have en parallax-effekt */
+.parallax-section {
+ height: 100vh;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ text-align: center;
+ font-size: 3rem;
+ font-weight: bold;
+ color: white;
+ position: relative;
+ overflow: hidden;
+}
+
+/* Baggrundsbillede med parallax-effekt */
+.bg {
+ position: absolute;
+ width: 120%;
+ height: 120%;
+ background-size: cover;
+ background-position: center;
+ transform: translateY(20%); /* Start lavere for parallax-effekt */
+ transition: transform 0.3s ease-out;
+ 
+}
+
+/* Model-viewer (3D dåser) */
+model-viewer {
+ width: 250px;
+ height: 500px;
+ opacity: 0;
+ transform: translateY(50px);
+ transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+
+
+
+
+/* Baggrundsfarver for test */
+.s1 { 
+ background-image: url(../images/baggrund1.png)
+
+} /* Rød-orange */
+.s2 { background-image: url(../images/baggrund2.png);} /* Grøn */
+.s3 { background-image: url(../images/baggrund3.png);} /* Blå */
+/* Baggrundsdiv (ny styling) */
